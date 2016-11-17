@@ -21,13 +21,14 @@ public class TuiterController {
     @Autowired
     private MensagemRepository mensagemRepository;
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @RequestMapping("/mensagem")
     public List<Mensagem> getMsgg() {
         return Lists.newArrayList(mensagemRepository.findAll());
     }
 
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:8080")
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(
             value = "/mensagem",
