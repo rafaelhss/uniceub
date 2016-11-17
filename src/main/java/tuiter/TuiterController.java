@@ -27,7 +27,7 @@ public class TuiterController {
     }
 
 
-    @CrossOrigin(origins = "http://localhost:63342")
+    @CrossOrigin
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(
             value = "/mensagem",
